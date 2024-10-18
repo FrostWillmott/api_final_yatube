@@ -8,8 +8,8 @@ v1_router.register("posts", PostViewSet, basename="post")
 v1_router.register(
     r"posts/(?P<post_id>\d+)/comments", CommentViewSet, basename="comment",
 )
-v1_router.register(r"follow", FollowViewSet, basename="follow"),
-v1_router.register(r"groups", GroupViewSet, basename="group")
+v1_router.register("follow", FollowViewSet, basename="follow"),
+v1_router.register("groups", GroupViewSet, basename="group")
 
 urlpatterns = [
     path("v1/", include(v1_router.urls)),
